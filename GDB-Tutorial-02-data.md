@@ -53,10 +53,12 @@ $7 = 5
 ```
 In fact, you can actually call functions that are in your program:
 ```
-(gdb) print strlen("hi mom")
+(gdb) print printf("hi mom")
 $8 = 6
 (gdb)
 ```
+There is also a `call` keyword that just does the function call. Using function calls from GDB is useful if you have defined "helper functions" that e.g. can print out your data structure or check for invariants. One note -- you can't use `call` or `print` function results if those functions are [`builtin` to the compiler](https://gcc.gnu.org/onlinedocs/gcc/Other-Builtins.html).
+
 Notice that output values are of the form `$N = <value>` for some constant `N`. We can use those *number variables* in subsequent expressions. E.g.:
 ```
 (gdb) print $7 * $8
