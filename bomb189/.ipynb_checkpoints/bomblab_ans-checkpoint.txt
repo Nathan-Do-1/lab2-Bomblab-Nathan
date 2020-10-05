@@ -1,0 +1,6 @@
+When a problem comes along, you must zip it!
+1 2 4 8 16 32
+1 -336
+6 21
+aaaaap
+5 2 4 1 3 6
